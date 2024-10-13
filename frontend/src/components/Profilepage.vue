@@ -226,7 +226,7 @@ export default {
 
 /* Apply the animation to the element */
 .waving {
-  animation: wave 2s infinite;
+  animation: wave 2s ease-in-out infinite;
   transform-origin: 70% 70%;
 }
 </style>
