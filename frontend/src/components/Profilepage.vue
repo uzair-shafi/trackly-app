@@ -12,7 +12,7 @@
             <img
               src="../assets/hand.svg"
               alt="Arrow Icon"
-              class="h-7 w-7 mt-[10px] wave"
+              class="h-7 w-7 mt-[10px] waving"
             />
           </div>
           <p class="text-l text-[#191919] tracking-tight mt-2">
@@ -215,41 +215,18 @@ export default {
 </script>
 
 <style scoped>
-.sticky-note-effect {
-  background-color: #fef08a;
-
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1),
-    -4px -4px 6px rgba(255, 255, 255, 0.5);
-  transform: rotate(-2deg);
-  position: relative;
-  padding-top: 20px;
-  transition: transform 0.3s ease-in-out;
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-15deg); }
+  80% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
 }
 
-.sticky-note-effect:hover {
-  transform: rotate(0deg);
-}
-
-.sticky-note-effect::before {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.09));
-  transform: translateX(-50%) rotate(-1deg);
-}
-
-.sticky-note-effect::after {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 12px;
-  background-color: #ffedd5;
-  border-radius: 50%;
+/* Apply the animation to the element */
+.waving {
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%;
 }
 </style>
