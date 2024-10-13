@@ -136,7 +136,7 @@ export default {
     const deleteReminder = async (reminderId) => {
       try {
         const response = await axios.delete(
-          `http://localhost:8080/reminders/${reminderId}`
+          `https://trackly-app.vercel.app/reminders/${reminderId}`
         );
         if (response.status === 200) {
           console.log("Reminder deleted successfully.");
@@ -150,7 +150,7 @@ export default {
     const markTaskAsCompleted = async (reminderId, taskId) => {
       try {
         const response = await axios.patch(
-          `http://localhost:8080/reminders/${reminderId}/tasks/${taskId}/complete`
+          `https://trackly-app.vercel.app/reminders/${reminderId}/tasks/${taskId}/complete`
         );
         if (response.status === 200) {
           console.log("Task marked as completed.");

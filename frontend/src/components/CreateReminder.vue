@@ -187,7 +187,7 @@ export default {
         }
 
         const response = await axios.post(
-          "http://localhost:8080/reminders",
+          "https://trackly-app.vercel.app/reminders",
           {
             title: this.title,
             description: this.description,

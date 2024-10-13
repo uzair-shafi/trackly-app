@@ -166,7 +166,7 @@ export default {
           return;
         }
 
-        const response = await axios.get("http://localhost:8080/reminders", {
+        const response = await axios.get("https://trackly-app.vercel.app/reminders", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -183,7 +183,7 @@ export default {
     async deleteReminder(reminderId) {
       const toast = useToast();
       try {
-        await axios.delete(`http://localhost:8080/reminders/${reminderId}`);
+        await axios.delete(`https://trackly-app.vercel.app/reminders/${reminderId}`);
         console.log("Reminder deleted successfully.");
         await this.fetchReminders();
         toast.success("Reminder deleted successfully!");
@@ -195,7 +195,7 @@ export default {
       const toast = useToast();
       try {
         const response = await axios.patch(
-          `http://localhost:8080/reminders/${reminderId}/complete`
+          `https://trackly-app.vercel.app/reminders/${reminderId}/complete`
         );
         const updatedReminder = response.data.reminder;
 

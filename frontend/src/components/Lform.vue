@@ -58,7 +58,7 @@ export default {
   methods: {
     async handleSubmit() {
       try {
-        const response = await axios.post("http://localhost:8080/auth/login", {
+        const response = await axios.post("https://trackly-app.vercel.app/auth/login", {
           email: this.email,
           password: this.password,
         });

@@ -16,7 +16,7 @@ const store = createStore({
     async fetchReminder({ commit }, id) {
       try {
         const response = await axios.get(
-          `http://localhost:8080/reminders/${id}`
+          `https://trackly-app.vercel.app/reminders/${id}`
         );
         commit("setReminder", response.data.reminder);
       } catch (error) {

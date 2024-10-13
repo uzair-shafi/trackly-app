@@ -196,7 +196,7 @@ export default {
         };
 
         const response = await axios.put(
-          `http://localhost:8080/reminders/${id}`,
+          `https://trackly-app.vercel.app/reminders/${id}`,
           updatedReminder
         );
         if (response.status === 200) {
