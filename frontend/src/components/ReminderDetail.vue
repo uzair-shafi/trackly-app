@@ -5,10 +5,10 @@
     <div class="container">
       <div class="flex flex-row justify-between items-center mt-20">
         <div>
-          <h1 class="text-2xl md:text-3xl font-bold tracking-tighter mt-6">
+          <h1 class="text-2xl md:text-3xl w-[300px] font-bold tracking-tighter mt-6">
             {{ reminder ? reminder.title : "Loading Reminder..." }}
           </h1>
-          <p class="text-l text-[#191919] tracking-tight mt-2">
+          <p class="text-l text-[#191919] w-[300px] tracking-tight mt-2">
             {{ reminder ? reminder.description : "Fetching description..." }}
           </p>
 
